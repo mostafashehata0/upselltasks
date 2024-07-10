@@ -1,0 +1,292 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: lato;
+}
+:root {
+  --gray-color: #9d9d9d;
+  --black-color: #000;
+  --blue-color: #4172dc;
+  --light-gray: #d9d9d9;
+  --button-color: #555555;
+}
+body {
+  margin-top: 50px;
+}
+/*============== start header================= */
+.header {
+  width: 90%;
+  margin: auto;
+}
+.header .text {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 8%;
+  margin-bottom: 20px;
+}
+.active {
+  color: var(--black-color);
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  color: var(--gray-color);
+  cursor: pointer;
+}
+
+/* =================End header=================== */
+/* =================start review=================== */
+.review {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+}
+@media (max-width: 1000px) {
+  .review {
+    display: block;
+  }
+  .description {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+  .description .stars {
+    justify-content: center;
+  }
+  .rates {
+    max-width: fit-content;
+    margin: 40px auto;
+  }
+}
+.description p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--gray-color);
+  margin-top: 20px;
+}
+.description .stars {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10%;
+}
+.description button {
+  margin-top: 20px;
+  background-color: transparent;
+  width: 185 px;
+  height: 40 px;
+  padding: 10px;
+  gap: 10px;
+  border-radius: 3px;
+  border: 1px 0px 0px 0px;
+  border-color: var(--gray-color);
+  opacity: 0px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  color: var(--gray-color);
+}
+.progressing {
+  width: 332px;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bar {
+  width: 245px;
+  height: 5px;
+  background-color: var(--light-gray);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+@media (max-width: 1000px) {
+  .progressing {
+    width: 280px;
+  }
+  .bar {
+    width: 180px;
+  }
+}
+.five-stars .bar::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 75%;
+  height: 5px;
+  border-radius: 5px;
+  background-color: var(--blue-color);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.four-stars .bar::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 50%;
+  height: 5px;
+  border-radius: 5px;
+  background-color: var(--blue-color);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.three-stars .bar::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 30%;
+  height: 5px;
+  border-radius: 5px;
+  background-color: var(--blue-color);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.two-stars .bar::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 90%;
+  height: 5px;
+  border-radius: 5px;
+  background-color: var(--blue-color);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.one-star .bar::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 20%;
+  height: 5px;
+  border-radius: 5px;
+  background-color: var(--blue-color);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+/* =================End review=================== */
+/* =================start details==================== */
+.details {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  margin-top: 40px;
+  gap: 2%;
+}
+.details .stars {
+  margin-top: 10px;
+}
+
+.details .name {
+  color: var(--gray-color);
+}
+.advantages,
+.disadvantages,
+.details-review {
+  display: flex;
+  gap: 10%;
+  margin-top: 20px;
+}
+@media (max-width: 1000px) {
+  .details .stars img {
+    max-width: 60px;
+  }
+
+  .details-review span {
+    display: block;
+    margin-top: 10px;
+    text-align: left;
+  }
+}
+
+.advantages p,
+.disadvantages p,
+.details-review p {
+  color: var(--gray-color);
+}
+
+.details .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  height: 30px;
+  width: 220px;
+  border: 1px solid var(--gray-color);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+.details .buttons button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: white;
+  border-color: transparent;
+  font-weight: bold;
+}
+.details .buttons button img {
+  height: 24px;
+}
+@media (max-width: 1000px) {
+  .details {
+    display: block;
+    text-align: center;
+    gap: 3%;
+  }
+  .details .stars {
+    display: inline;
+    margin-top: 0px;
+  }
+  .details .buttons {
+    width: 100px;
+    gap: 5%;
+    margin: 20px auto;
+  }
+  .details-text {
+    margin-top: 10px;
+  }
+}
+
+.dtails-image {
+  margin-left: 150px;
+  margin-top: 40px;
+}
+@media (max-width: 1000px) {
+  .dtails-image {
+    display: block;
+    width: fit-content;
+    margin: auto;
+  }
+}
+
+/* =================End details==================== */
